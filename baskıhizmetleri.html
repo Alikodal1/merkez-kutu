@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baskı Hizmetleri – Merkez Kutu</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">Merkez <span>Kutu</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="kartonkutu.html">Karton Kutu</a></li>
+          <li><a href="baskıhizmetleri.html">Baskı Hizmetleri</a></li>
+          <li><a href="hakkımızda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Baskı &amp; Üretim Hizmetlerimiz</h1>
+    <p>Üretimin her aşamasını kontrol ediyor, farklı kutu tiplerine uygun profesyonel çözümler sunuyoruz.</p>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="num" id="visible-count">8</div>
+      <div class="lbl">Hizmet</div>
+    </div>
+    <div class="stat">
+      <div class="num">4</div>
+      <div class="lbl">Kategori</div>
+    </div>
+    <div class="stat">
+      <div class="num">%100</div>
+      <div class="lbl">Yerli üretim</div>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Tümü</button>
+    <button class="filter-btn" data-filter="yapistirma">Yapıştırma</button>
+    <button class="filter-btn" data-filter="kesim">Kesim</button>
+    <button class="filter-btn" data-filter="Asetat">Asetat</button>
+    <button class="filter-btn" data-filter="baski">Baskı</button>
+  </div>
+
+  <!-- VIDEO GRID -->
+  <!--
+  ============================================================
+  NASIL YENİ VİDEO EKLENİR?
+  Aşağıdaki kartlardan birini kopyalayıp yapıştırın ve şunları değiştirin:
+    1. data-cat  →  "yapistirma" | "kesim" | "dizim" | "baski"
+    2. <video src="...">  →  videonuzun dosya yolu (ör: videos/yeni.mp4)
+    3. .card-tag sınıfı  →  tag-yapistirma | tag-kesim | tag-dizim | tag-baski
+    4. Etiket metni, başlık (.card-title) ve açıklamayı (.card-desc) güncelleyin
+    5. .duration içindeki süreyi güncelleyin (ör: 0:45)
+  ============================================================
+-->
+  <div class="grid" id="video-grid">
+
+    <!-- KART 1 -->
+    <article class="video-card" data-cat="yapistirma">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/dortnoktayapıstırma.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">0:31</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-yapistirma">Yapıştırma</span>
+        <div class="card-title">4 / 6 / 7 Nokta Yapıştırma</div>
+        <div class="card-desc">Kutu yapıştırma işlemleri yüksek hassasiyetle gerçekleştirilir.</div>
+      </div>
+    </article>
+
+    <!-- KART 2 -->
+    <article class="video-card" data-cat="yapistirma">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/dortnoktayapıstırma1.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">0:45</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-yapistirma">Yapıştırma</span>
+        <div class="card-title">4 / 6 / 7 Nokta Yapıştırma</div>
+        <div class="card-desc">Kutu yapıştırma işlemleri yüksek hassasiyetle gerçekleştirilir.</div>
+      </div>
+    </article>
+
+    <!-- KART 3 -->
+    <article class="video-card" data-cat="yapistirma">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/seperatörlükutu.mp4" preload="metadata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">0:28</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-yapistirma">Yapıştırma</span>
+        <div class="card-title">Seperatörlü Kutu</div>
+        <div class="card-desc">Standart karton kutu yapıştırma işlemi hızlı ve verimli şekilde yapılır.</div>
+      </div>
+    </article>
+
+    <!-- KART 4 -->
+    <article class="video-card" data-cat="kesim">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/kesim.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">0:30</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-kesim">Kesim</span>
+        <div class="card-title">Bobst Kesim</div>
+        <div class="card-desc">Yüksek hızlı Bobst makinesiyle hassas kutu kesim operasyonu.</div>
+      </div>
+    </article>
+
+    <!-- KART 5 -->
+    <article class="video-card" data-cat="Kesim">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/kesim1.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" /</svg>
+          </div>
+        </div>
+        <span class="duration">0:30</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-kesim">Kesim</span>
+        <div class="card-title">Bobst Kesim</div>
+        <div class="card-desc">Yüksek hızlı Bobst makinesiyle hassas kutu kesim operasyonu.</div>
+      </div>
+    </article>
+
+    <!-- KART 6 -->
+    <article class="video-card" data-cat="yapistirma">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/yanyapistirma.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">0:30</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-yapistirma">Yapıştırma</span>
+        <div class="card-title">Yapıştırma</div>
+        <div class="card-desc">Kutu yapıştırma işlemleri yüksek hassasiyetle gerçekleştirilir.</div>
+      </div>
+    </article>
+
+    <!-- KART 7 -->
+    <article class="video-card" data-cat="Asetat">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/asetat.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">0:22</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-asetat">Asetat</span>
+        <div class="card-title">Asetat</div>
+        <div class="card-desc">Otomatik asetat makinemizde, her ebatta kutu penceresine milimetrik hassasiyetle şeffaf
+          film uyguluyoruz.</div>
+      </div>
+    </article>
+
+    <!-- KART 8 -->
+    <article class="video-card" data-cat="Asetat">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/asetat1.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">0:28</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-asetat">Asetat</span>
+        <div class="card-title">Asetat</div>
+        <div class="card-desc">Ürününüzü rafta görünür kılan şeffaf pencereleri, kusursuz bir işçilikle kutularınıza
+          entegre ediyoruz.</div>
+      </div>
+    </article>
+
+
+
+    <article class="video-card" data-cat="yapistirma">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/ozeltasarımkutu.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">1:39</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-yapistirma">Yapıştırma</span>
+        <div class="card-title">Geçmeli kapak kutu</div>
+        <div class="card-desc">İhtiyaca özel üretilen, özgün ve fonksiyonel kutu çözümleri.</div>
+      </div>
+    </article>
+
+    <article class="video-card" data-cat="yapistirma">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/konikutu.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">0:46</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-yapistirma">Yapıştırma</span>
+        <div class="card-title">Konik (Külah) Model kutu</div>
+        <div class="card-desc">Yüksek hassasiyetli kesim, estetik ve pratik gıda ambalajı.</div>
+      </div>
+    </article>
+
+    <article class="video-card" data-cat="yapistirma">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/fastfoodkutu.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">1:02</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-yapistirma">Yapıştırma</span>
+        <div class="card-title">Patates ve Atıştırmalık Kutusu</div>
+        <div class="card-desc">Gıdaya uygun, pratik kullanımlı ve estetik atıştırmalık çözümü.</div>
+      </div>
+    </article>
+
+
+    <article class="video-card" data-cat="yapistirma">
+      <div class="video-thumb" onclick="togglePlay(this)">
+        <video src="videos/kulahkutu.mp4" preload="metedata"></video>
+        <div class="play-overlay">
+          <div class="play-btn">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="#111">
+              <polygon points="0,0 16,9 0,18" />
+            </svg>
+          </div>
+        </div>
+        <span class="duration">0:21</span>
+      </div>
+      <div class="card-body">
+        <span class="card-tag tag-yapistirma">Yapıştırma</span>
+        <div class="card-title">Külah kutu</div>
+        <div class="card-desc">Sokak lezzetleri için özel tasarlanmış, ergonomik ve sızdırmaz yapılı estetik külah
+          çözümü.</div>
+      </div>
+    </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ++ BURAYA YENİ KARTLAR EKLEYEBİLİRSİNİZ ++ -->
+
+  </div>
+
+  <div class="no-results" id="no-results">Bu kategoride henüz video bulunmuyor.</div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <div class="cta-box">
+      <p>Aradığınız hizmeti bulamadınız mı?</p>
+      <span>Bize ulaşın, size özel çözüm üretelim.</span>
+      <br>
+      <a href="iletisim.html" class="cta-btn">İletişime Geç</a>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
