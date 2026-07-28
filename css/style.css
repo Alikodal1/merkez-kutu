@@ -25,23 +25,12 @@ body {
 
 
 /* Hamburger Menü */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-/* menü alanı */
-
-/* Mobil görünüm */
 @media (max-width: 768px) {
 
   .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
+    display: block !important;
+    font-size: 40px !important;
+    color: red !important;
   }
 
 }
