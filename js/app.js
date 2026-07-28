@@ -1,36 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* ── Makine slider (sadece slider olan sayfada çalışır) ── */
   const slides = document.querySelector(".slides");
   const items = document.querySelectorAll(".slide");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
 
   let index = 0;
 
-  document.querySelector(".next").addEventListener("click", () => {
-    index++;
-    if (index >= items.length) index = 0;
-    update();
-  });
-
-  document.querySelector(".prev").addEventListener("click", () => {
-    index--;
-    if (index < 0) index = items.length - 1;
-    update();
-  });
-
   function update() {
-    // Yüzde (%) yerine vw (ekran genişliği) kullanıyoruz. 
-    // Bu sayede kapsayıcı ne kadar geniş olursa olsun tam 1 ekran kayar.
-    slides.style.transform = `translateX(-${index * 100}vw)`;
+    if (slides) {
+      slides.style.transform = `translateX(-${index * 100}vw)`;
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      index++;
+      if (index >= items.length) index = 0;
+      update();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      index--;
+      if (index < 0) index = items.length - 1;
+      update();
+    });
+  }
+
+  /* ── Hamburger menü (sadece nav'ı olan sayfada çalışır) ── */
+  const menuToggle = document.getElementById("menu-btn");
+  const navLinks = document.querySelector("#nav-menu");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
   }
 });
-
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.querySelector("nav-links");
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-
 
 /* ============================================================
    baski-hizmetleri.js

@@ -498,44 +498,7 @@ body {
 }
 
 /* ── NAV ── */
-nav {
-  background: #111;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 56px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
 
-.logo {
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.3px;
-}
-
-.logo span {
-  color: #e03030;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ul a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.15s;
-}
-
-nav ul a:hover,
-nav ul a.active {
-  color: #fff;
-}
 
 /* ── HERO ── */
 .hero {
