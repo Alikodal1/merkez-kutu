@@ -23,12 +23,27 @@ body {
   /* Logonun altındaki yazıyla arasına boşluk bırakır */
 }
 
-/* menü alanı */
+
+/* Hamburger Menü */
 .menu-toggle {
-  display: block;
-  font-size: 40px;
-  color: red;
+  display: none;
+  font-size: 30px;
   cursor: pointer;
+}
+
+/* menü alanı */
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
 }
 
 
