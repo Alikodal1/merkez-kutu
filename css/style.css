@@ -26,27 +26,6 @@ body {
 
 
 /* Hamburger Menü */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-
-/* Mobil */
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-    font-size: 30px;
-    color: #111;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-}
 
 
 /* NAVBAR */
@@ -544,8 +523,6 @@ nav {
 
 nav ul {
   list-style: none;
-  display: flex;
-  gap: 2rem;
 }
 
 nav ul a {
@@ -840,9 +817,6 @@ nav ul a.active {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {
-  nav ul {
-    gap: 1rem;
-  }
 
   .hero h1 {
     font-size: 24px;
@@ -851,4 +825,27 @@ nav ul a.active {
   .grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* MOBİL MENÜ */
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+
+@media(max-width:768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+  .nav-links {
+    display: none;
+  }
+
 }
