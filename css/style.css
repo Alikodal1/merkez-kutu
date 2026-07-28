@@ -41,8 +41,8 @@ body {
 }
 
 .logo {
-  color:
-    font-size: 22px;
+  color: #ffffff;
+  font-size: 22px;
   font-weight: 600;
 }
 
@@ -829,6 +829,8 @@ nav ul a.active {
 
 /* MOBİL MENÜ */
 
+/* MOBİL MENÜ */
+
 .menu-toggle {
   display: none;
   font-size: 30px;
@@ -836,16 +838,34 @@ nav ul a.active {
   color: white;
 }
 
+/* Sadece telefon ekranlarında geçerli olacak ayarlar */
+/* Sadece telefon ekranlarında geçerli olacak ayarlar */
+@media (max-width: 768px) {
 
-@media(max-width:768px) {
-
+  /* İKONU MOBİLDE GÖRÜNÜR YAPAN KOD BURASI */
   .menu-toggle {
     display: block;
   }
 
-
   .nav-links {
     display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #111;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000;
   }
 
+  /* JavaScript ile bu sınıf eklendiğinde menü görünür olacak */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
 }
