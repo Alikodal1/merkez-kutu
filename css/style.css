@@ -23,6 +23,20 @@ body {
   /* Logonun altındaki yazıyla arasına boşluk bırakır */
 }
 
+/* menü alanı */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+}
 
 
 
