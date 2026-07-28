@@ -24,17 +24,29 @@ body {
 }
 
 
+
 /* Hamburger Menü */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+/* Mobil */
 @media (max-width: 768px) {
 
   .menu-toggle {
-    display: block !important;
-    font-size: 40px !important;
-    color: red !important;
+    display: block;
+    font-size: 30px;
+    color: #111;
+  }
+
+  .nav-links {
+    display: none;
   }
 
 }
-
 
 
 /* NAVBAR */
