@@ -726,6 +726,22 @@ body {
   line-height: 1.55;
 }
 
+/*      youtube        */
+
+
+.video-thumb iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+
+
+
+
+
+
 /* ── NO RESULTS ── */
 .no-results {
   display: none;
