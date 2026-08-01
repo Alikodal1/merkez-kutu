@@ -256,12 +256,65 @@ body {
   }
 }
 
-/* ABOUT HERO */
 
-.about-hero img {
+
+/* HAKKIMIZDA GÖRSEL */
+.about-hero {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-hero h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.75rem;
+}
+
+.about-hero p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.about-gallery-item {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-gallery-item img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* RESPONSIVE - senin category-grid'deki mantığın aynısı */
+@media(max-width: 900px) {
+  .about-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .about-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ABOUT CONTENT */
