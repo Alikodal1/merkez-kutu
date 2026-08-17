@@ -29,43 +29,115 @@ body {
 
 
 /* NAVBAR */
+/* ================================
+   NAVBAR - ÜST MENÜ
+   ================================ */
+
 .navbar {
-  background: #111;
-  padding: 18px 0;
+  /* Navbar'ın arka plan rengi */
+  background-color: #111;
+
+  /* Navbar'ın sayfanın tamamını kaplamasını sağlar */
+  width: 100%;
+
+  /* Navbar'ı diğer içeriklerin üzerinde tutar */
+  position: relative;
+  z-index: 1000;
+
+  /* Navbar'ın altına ince bir çizgi ekler */
+  border-bottom: 1px solid #222;
 }
+
+
+/* ================================
+   NAVBAR İÇERİĞİ
+   ================================ */
 
 .nav-content {
+  /* Logo ve menüyü yan yana getirir */
   display: flex;
-  justify-content: space-between;
+
+  /* Dikey olarak ortalar */
   align-items: center;
+
+  /* Logo solda, menü sağda olacak şekilde dağıtır */
+  justify-content: space-between;
+
+  /* Navbar'ın yüksekliği */
+  min-height: 90px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
+
+/* ================================
+   LOGO
+   ================================ */
 
 .logo img {
-  height: 60px;
+  /* Logo yüksekliği */
+  height: 5105px;
+
+  /* Genişliği otomatik ayarlar */
   width: auto;
+
+  /* Görselin altındaki boşluğu önler */
   display: block;
 }
 
-.logo img:hover {
-  transform: scale(1.03);
-}
+
+/* ================================
+   MENÜ LİSTESİ
+   ================================ */
 
 .nav-links {
-  list-style: none;
+  /* Menü elemanlarını yatay olarak dizer */
   display: flex;
-  gap: 25px;
+
+  /* Menü elemanlarını dikey olarak ortalar */
+  align-items: center;
+
+  /* Menü elemanları arasındaki boşluk */
+  gap: 30px;
+
+  /* Liste işaretlerini kaldırır */
+  list-style: none;
+
+  /* Varsayılan dış boşluğu kaldırır */
+  margin: 0;
+
+  /* Varsayılan iç boşluğu kaldırır */
+  padding: 0;
 }
 
+
+/* ================================
+   MENÜ YAZILARI
+   ================================ */
+
 .nav-links a {
-  color: white;
+  /* Yazı rengini açık yapar */
+  color: #c9baba;
+
+  /* Link alt çizgisini kaldırır */
   text-decoration: none;
+
+  /* Menü yazı boyutu */
   font-size: 14px;
+
+  /* Yazı kalınlığı */
+  font-weight: 500;
+
+  /* Renk değişimini yumuşak hale getirir */
+  transition: color 0.3s ease;
+}
+
+
+/* ================================
+   MENÜ ÜZERİNE GELİNCE
+   ================================ */
+
+.nav-links a:hover {
+  /* Mouse üzerine geldiğinde kırmızı olur */
+  color: #d90429;
 }
 
 /* HERO */
