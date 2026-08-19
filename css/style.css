@@ -35,19 +35,19 @@ body {
 
 .navbar {
   /* Navbar'ın arka plan rengi */
-  background-color: #111;
+  background-color: #f2f2f0;
 
   /* Navbar'ın sayfanın tamamını kaplamasını sağlar */
   width: 100%;
 
   /* Navbar'ı diğer içeriklerin üzerinde tutar */
   position: relative;
-  z-index: 1000;
+  z-index: 100;
 
   /* Navbar'ın altına ince bir çizgi ekler */
-  border-bottom: 1px solid #222;
-}
+  border-bottom: 1px solid #e0e0dd;
 
+}
 
 /* ================================
    NAVBAR İÇERİĞİ
@@ -74,7 +74,7 @@ body {
 
 .logo img {
   /* Logo yüksekliği */
-  height: 5105px;
+  height: 50px;
 
   /* Genişliği otomatik ayarlar */
   width: auto;
@@ -114,8 +114,8 @@ body {
    ================================ */
 
 .nav-links a {
-  /* Yazı rengini açık yapar */
-  color: #c9baba;
+  /* Antrasit navbar'da okunaklı açık gri ton */
+  color: #444;
 
   /* Link alt çizgisini kaldırır */
   text-decoration: none;
@@ -965,12 +965,13 @@ body {
   display: none;
   font-size: 30px;
   cursor: pointer;
-  color: white;
+  color: #333;
 }
 
 /* Sadece telefon ekranlarında geçerli olacak ayarlar */
-/* Sadece telefon ekranlarında geçerli olacak ayarlar */
 @media (max-width: 768px) {
+
+
 
   /* İKONU MOBİLDE GÖRÜNÜR YAPAN KOD BURASI */
   .menu-toggle {
@@ -981,7 +982,7 @@ body {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #111;
+    background-color: #f2f2f0;
     position: absolute;
     top: 70px;
     left: 0;
