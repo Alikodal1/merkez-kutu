@@ -1,0 +1,137 @@
+/*   */
+.contact-page {
+    padding: 80px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Sol ve sağ sütunu eşit böler */
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-info h1 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Harita ve Yol Tarifi Butonu Stilleri */
+.map-wrapper {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.map iframe {
+    border-radius: 8px;
+    display: block;
+}
+
+.directions-btn {
+    display: block;
+    text-align: center;
+    background-color: #1a1a1a;
+    /* Kurumsal koyu antrasit */
+    color: #ffffff;
+    padding: 12px 18px;
+    margin-top: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.directions-btn:hover {
+    background-color: #a11b1b;
+    /* Merkez Kutu amblem kırmızısı */
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(161, 27, 27, 0.3);
+}
+
+/* İLETİŞİM FORMU GELİŞMİŞ STİLLERİ */
+.contact-form {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #fafafa;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #a11b1b;
+    /* Merkez Kutu kırmızısı */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(161, 27, 27, 0.1);
+}
+
+.contact-form select.form-select {
+    cursor: pointer;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
+    background-color: #a11b1b;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(161, 27, 27, 0.25);
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #d90429;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(217, 4, 41, 0.35);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        /* Mobilde alt alta geçer */
+    }
+}

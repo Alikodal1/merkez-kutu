@@ -5,145 +5,187 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hakkımızda | Merkez Kutu</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/hakkimizda.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<script src="js/app.js"></script>
-
-
 <body>
 
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="container nav-content">
       <a href="index.html" class="logo">
-        <img src="images/logo_merkez.png" alt="Merkez Kutu Logo">
+        <img src="images/optimize/logo_merkez.webp" alt="Merkez Kutu Logo">
       </a>
       <nav>
-        <div class="menu-toggle" id="menu-btn"> <!-- menü butonu -->
-          ☰
-        </div>
+        <div class="menu-toggle" id="menu-btn">☰</div>
         <ul class="nav-links" id="nav-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
           <li><a href="kartonkutu.html">Karton Kutu</a></li>
           <li><a href="uretim.html">Üretim Sürecimiz</a></li>
-          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="hakkimizda.html" class="active">Hakkımızda</a></li>
           <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ŞİRKET GÖRSELİ -->
-
-  <section class="about-hero">
-
-    <div class="about-gallery">
-      <div class="about-gallery-item">
-        <img src="images/optimize/team.webp" alt="Baskı süreci">
-      </div>
-      <div class="about-gallery-item">
-        <img src="images/optimize/baskı1.webp" alt="Ambalaj üretimi">
-      </div>
-      <div class="about-gallery-item">
-        <img src="images/optimize/fabrika.webp" alt="Kalite kontrol">
-      </div>
-      <div class="about-gallery-item">
-        <img src="images/optimize/lojistik.webp" alt="İhracat">
-      </div>
-    </div>
-  </section>
-
-  <!-- KURUMSAL METİN -->
-
-  <section class="about-content">
-    <div class="container about-grid">
-
-      <div>
-        <h1>Merkez Kutu Hakkında</h1>
-        <p>
-          Merkez Kutu olarak, İstanbul'da yer alan tesisimizde matbaa ve ambalaj sektörüne yüksek kapasiteli fason
-          üretim desteği sunuyoruz. Geniş makine parkurumuzla, gelen işleri baskıdan kutu formuna kadar olan tüm
-          süreçlerde tek çatı altında, hız ve güvenle tamamlıyoruz.
-        </p>
-
-
-        <h2>Kutunun Adresi, Kalitenin Merkezi</h2>
-        <h3>
-          Peki Neden Merkez Kutu?
-        </h3>
-        <p>Çünkü işin başında alanının en iyi ustaları var. Sadece güçlü makine parkurumuzla değil, bu makineleri en
-          verimli şekilde kullanan usta ellerimizle fark yaratıyoruz.
-          Sektördeki en büyük sözümüz nettir: Her iş, söz verdiğimiz gün ve saatte, eksiksiz teslim edilir.</p>
-
-
-      </div>
-      <!-- sağ sütün metinler-->
-      <div>
-        <h2>Kalite Bizim Standardımızdır</h2>
-        <p>
-          Üretimin hiçbir aşamasını şansa bırakmayız. Baskı ve kesimden ayıklamaya, yapıştırmadan son kontrole kadar tüm
-          süreçleri bizzat ve adım adım denetleriz. İşin ehli ustalarımızın süzgecinden geçmeyen, içimize sinmeyen
-          hiçbir kutu bu dükkandan çıkmaz. Bizim için müşteri memnuniyeti geçici bir vizyon değil, kalıcı bir değerdir.
-        </p>
-
-        <h2>Vizyonumuz</h2>
-        <p>
-          Çekirdekten yetişme ustalığın verdiği sarsılmaz güveni, modern ve yüksek kapasiteli makine gücümüzle
-          birleştirerek; fason ambalaj üretiminde sektörün en kusursuz ve en hızlı işleyen tesisi olmaya devam etmek.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MAKİNE BÖLÜMÜ -->
-  <section class="slider">
-
-    <div class="slides">
-
-      <div class="slide">
-        <img src="images/optimize/omega110.webp">
-        <div class="slide-text">
-          <h2>Omega intro 110 Sıcak ve Soğuk yapıştırma</h2>
-          <p>Kutu yapıştırma çözümleri</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="images/optimize/omega90.webp">
-        <div class="slide-text">
-          <h2>OMEGA Allpro 90</h2>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="images/optimize/asetatmak.webp">
-        <div class="slide-text">
-          <h2>Asetat Makinesi</h2>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="images/optimize/mk4.webp">
-        <div class="slide-text">
-          <h2>BOBST SP 102-E</h2>
-        </div>
-      </div>
-
-    </div>
-
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-
-  </section>
-
-  <footer class="footer">
+  <!-- 1. BÖLÜM: BÖLÜM BAŞLIĞI (HERO BANNER) -->
+  <section class="about-hero-banner">
     <div class="container">
-      <p>© 2026 Merkez Kutu | İstanbul / Türkiye</p>
+      <span class="about-subtitle">KURUMSAL</span>
+      <h1 class="about-title">Kutunun Adresi, Kalitenin Merkezi</h1>
+      <p class="about-lead">
+        Çekirdekten yetişme ustalığı, disiplinli fason üretim anlayışını ve modern makine parkurunu tek çatı altında
+        buluşturuyoruz.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. BÖLÜM: DETAYLI ŞİRKET HİKAYESİ & TEKST / VİZYON -->
+  <section class="about-main-section">
+    <div class="container about-grid-container">
+
+      <!-- Sol Sütun: Genişletilmiş Şirket Metni -->
+      <div class="about-text-content">
+        <h2>Ustalıkla Şekillenen Ambalaj Çözümleri</h2>
+        <p>
+          Merkez Kutu Ambalaj olarak, İstanbul'da yer alan yüksek kapasiteli tesisimizde matbaa ve ambalaj sektörüne
+          fason üretim desteği sunuyoruz. Kuruluşumuzdan bu yana temel hedefimiz; fason işlerde yaşanan kalite, teslimat
+          ve iletişim aksaklıklarını ortadan kaldırarak müşterilerimize sarsılmaz bir güven ortamı sağlamaktır.
+        </p>
+        <p>
+          Genişleyen teknolojik altyapımız ve 5 ana makine hattımız sayesinde; baskıdan kesime, ayıklamadan pencereli
+          asetat yapıştırmaya ve katlama-yapıştırmaya kadar tüm süreçleri bizzat kendi bünyemizde yönetiyoruz.
+        </p>
+        <p>
+          <strong>Peki Neden Merkez Kutu?</strong><br>
+          Çünkü işimizin başında alanının en deneyimli ustaları var. Sadece güçlü makine gücümüzle değil, bu teknolojiyi
+          en verimli şekilde yönlendiren işinin ehli ellerimizle fark yaratıyoruz. Sektördeki en net ilkemiz şudur:
+          <em>Her iş, söz verilen gün ve saatte, sıfır hatayla teslim edilir.</em>
+        </p>
+
+        <!-- Öne Çıkan Değerler Kartları -->
+        <div class="about-features-boxes">
+          <div class="feature-card">
+            <h4>Sıfır Hata Vizyonu</h4>
+            <p>Baskı ve yapıştırma süreçlerinde ustalarımızın süzgecinden geçmeyen hiçbir kutu tesisimizden çıkmaz.</p>
+          </div>
+          <div class="feature-card">
+            <h4>Kesintisiz Zamanında Teslimat</h4>
+            <p>Söz verilen gün ve saatte eksiksiz teslimat sağlamak temel ilkemizdir.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sağ Sütun: Fabrika Stüdyo Kartı -->
+      <div class="about-visual-card">
+        <div class="about-visual-inner">
+          <img src="images/optimize/fabrika.webp" alt="Merkez Kutu Üretim Tesisleri">
+          <div class="visual-badge">
+            <span>İstanbul / Türkiye</span>
+            <small>Gelişmiş Fason Ambalaj Üretim Tesisi</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. BÖLÜM: 5 MAKİNELİ GELİŞMİŞ PARKUR VİTRİNİ -->
+  <section class="machinery-section">
+    <div class="container">
+      <div class="section-header-center">
+        <h2>Makine Parkurumuz</h2>
+        <p>Yüksek tirajlı baskı, hassas kesim, ayıklama ve çok yönlü yapıştırma teknolojilerimiz</p>
+      </div>
+
+      <div class="machinery-grid">
+
+        <!-- Makine 1 -->
+        <div class="machine-card">
+          <div class="machine-img-box">
+            <img src="images/optimize/std110mk.webp" alt="Omega Intro 110">
+          </div>
+          <div class="machine-info">
+            <h3>Omega Intro 110</h3>
+            <span class="machine-tag">Sıcak & Soğuk Yapıştırma</span>
+            <p>Karton kutu yapıştırma süreçlerinde yüksek hızlı, hassas ve çok yönlü fason yapıştırma çözümü.</p>
+          </div>
+        </div>
+
+        <!-- Makine 2 -->
+        <div class="machine-card">
+          <div class="machine-img-box">
+            <img src="images/optimize/std90mk.webp" alt="OMEGA Allpro 90">
+          </div>
+          <div class="machine-info">
+            <h3>OMEGA Allpro 90</h3>
+            <span class="machine-tag">Yüksek Hızlı Katlama Yapıştırma</span>
+            <p>Farklı kutu tipleri ve kilitli alt tasarımlar için yüksek hassasiyetli katlama-yapıştırma hattı.</p>
+          </div>
+        </div>
+
+        <!-- Makine 3 -->
+        <div class="machine-card">
+          <div class="machine-img-box">
+            <img src="images/optimize/stdasestat.webp" alt="Asetat Makinesi">
+          </div>
+          <div class="machine-info">
+            <h3>Asetat Makinesi</h3>
+            <span class="machine-tag">Pencere Çakma & Asetat</span>
+            <p>Pencereli kutular ve ambalajlar için hassas asetat yapıştırma ve özel ambalaj üniteleri.</p>
+          </div>
+        </div>
+
+        <!-- Makine 4 -->
+        <div class="machine-card">
+          <div class="machine-img-box">
+            <img src="images/optimize/stdbobs.webp" alt="BOBST SP 102-E">
+          </div>
+          <div class="machine-info">
+            <h3>BOBST SP 102-E</h3>
+            <span class="machine-tag">Otomatik Kesim & Ayıklama</span>
+            <p>Yüksek tirajlı ve hassas pozalamalı otomatik karton kesim ve ayıklama teknolojisi.</p>
+          </div>
+        </div>
+
+        <div class="machine-card machine-card-wide">
+          <div class="machine-img-box">
+            <img src="images/optimize/stdofset.webp" alt="Ofset Baskı Parkuru">
+          </div>
+          <div class="machine-info">
+            <h3>Ofset Baskı Parkuru</h3>
+            <span class="machine-tag">Yüksek Çözünürlüklü Karton Baskı</span>
+            <p>Canlı renk üretimi, yüksek hassasiyetli baskı netliği ve yüksek tirajlı ambalaj baskı çözümleri.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="custom-minimal-footer">
+    <div class="footer-watermark">MERKEZ KUTU</div>
+    <div class="container footer-content-wrapper">
+
+      <div class="footer-bottom-row">
+        <div class="footer-copyright">© 2026 MERKEZ KUTU AMBALAJ - TÜM HAKLARI SAKLIDIR.</div>
+        <nav class="footer-nav-links">
+          <a href="index.html">ANA SAYFA</a>
+          <a href="kartonkutu.html">KARTON KUTU</a>
+          <a href="uretim.html">ÜRETİM SÜRECİMİZ</a>
+          <a href="hakkimizda.html">HAKKIMIZDA</a>
+          <a href="iletisim.html">İLETİŞİM</a>
+        </nav>
+      </div>
     </div>
   </footer>
 
+  <!-- JavaScript Dosyası -->
+  <script src="js/app.js"></script>
 </body>
 
 </html>

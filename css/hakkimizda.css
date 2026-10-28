@@ -1,0 +1,266 @@
+/* ==========================================================
+   HAKKIMIZDA SAYFASI ÖZEL TASARIM KODLARI
+   ========================================================== */
+
+/* 1. HERO BANNER */
+.about-hero-banner {
+    background-color: #1f1f1f;
+    /* Koyu şık stüdyo tonu */
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 3px solid #a11b1b;
+}
+
+.about-subtitle {
+    color: #a11b1b;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.about-lead {
+    font-size: 16px;
+    color: #cccccc;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* 2. HİKAYEMİZ & İKİ SÜTUNLU ALAN */
+.about-main-section {
+    padding: 80px 0;
+    background-color: #fcfcfc;
+}
+
+.about-grid-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text-content {
+    flex: 1;
+}
+
+.about-text-content h2 {
+    font-size: 30px;
+    color: #222222;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.about-text-content p {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.about-features-boxes {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #a11b1b;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card h4 {
+    font-size: 16px;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Sağ Sütun Beyaz Stüdyo Görsel Kartı */
+.about-visual-card {
+    flex: 1;
+}
+
+.about-visual-inner {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.about-visual-inner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.visual-badge {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border-left: 3px solid #a11b1b;
+}
+
+.visual-badge span {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.visual-badge small {
+    color: #dddddd;
+    font-size: 12px;
+}
+
+/* 3. MAKİNE PARKURU GRID BÖLÜMÜ */
+.machinery-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+}
+
+.section-header-center {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.section-header-center h2 {
+    font-size: 32px;
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+.section-header-center p {
+    font-size: 15px;
+    color: #666666;
+}
+
+.machinery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2x2 Şık Izgara */
+    gap: 30px;
+}
+
+.machine-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 5. Makinenin (Ofset Baskı Parkuru) 2'li düzende alt satırda tam genişlikte yayılması için */
+.machine-card-wide {
+    grid-column: span 2;
+}
+
+.machine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-color: #a11b1b;
+}
+
+.machine-img-box {
+    width: 100%;
+    height: 340px;
+    /* 260px'den 340px'e çıkarılarak dikey alan genişletildi */
+    background-color: #f8f8f8;
+    /* Makinelerin etrafında temiz stüdyo tonu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 15px;
+    /* Görselin kutu içine rahat sığması için pay */
+}
+
+.machine-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.machine-card:hover .machine-img-box img {
+    transform: scale(1.03);
+    /* Üzerine gelince çok hafif ve şık bir büyüme efekti */
+}
+
+.machine-info {
+    padding: 25px;
+    flex: 1;
+}
+
+.machine-info h3 {
+    font-size: 20px;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.machine-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #a11b1b;
+    background-color: #fdf0f0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.machine-info p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* RESPONSIVE (MOBİL UYUM) */
+@media (max-width: 992px) {
+    .about-grid-container {
+        flex-direction: column;
+    }
+
+    .machinery-grid {
+        grid-template-columns: 1fr;
+        /* Mobilde tek sütun */
+    }
+
+    .machine-card-wide {
+        grid-column: span 1;
+        /* Mobilde geniş kart da tek sütuna uyarlanır */
+    }
+
+    .about-features-boxes {
+        flex-direction: column;
+    }
+}

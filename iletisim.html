@@ -5,24 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>İletişim | Merkez Kutu</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/iletisim.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<script src="js/app.js"></script>
 
 <body>
   <header class="navbar">
     <div class="container nav-content">
-
       <a href="index.html" class="logo">
-        <img src="images/logo_merkez.png" alt="Merkez Kutu Logo">
+        <img src="images/optimize/logo_merkez.webp" alt="Merkez Kutu Logo">
       </a>
-
       <nav>
         <div class="menu-toggle" id="menu-btn">
           ☰
         </div>
-
         <ul class="nav-links" id="nav-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
           <li><a href="kartonkutu.html">Karton Kutu</a></li>
@@ -31,62 +28,80 @@
           <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
 
   <section class="contact-page">
     <div class="container contact-grid">
 
-      <!-- SOL TARAF -->
+      <!-- SOL TARAF: İLETİŞİM BİLGİLERİ VE HARİTA -->
       <div class="contact-info">
-
         <h1>İletişim</h1>
-
         <p><strong>Telefon:</strong> +90 536 482 6304 & +90 532 179 7157</p>
-        <p><strong>E-posta:</strong> info@merkezkutu.com</p>
-        <p><strong>Adres:</strong> Yüzyıl Matbaacılar Sitesi 4.Cadde, Bağcılar/İstanbul</p>
-
+        <p><strong>E-posta :</strong> info@merkezkutu.com</p>
+        <p><strong>Adres:</strong> Massit, 100. Yıl, 4. Cd. No:135, Bağcılar/İstanbul</p>
         <strong>Çalışma Saatlerimiz:</strong>
-
         <p><strong>🕒 Pazartesi-Cuma:</strong> 24 saat</p>
         <p><strong>🕒 Cumartesi:</strong> 08.00 - 13.00</p>
         <p><strong>🕒 Pazar:</strong> Kapalı</p>
 
-        <!-- HARİTA -->
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d752.079489349721!2d28.848204275535508!3d41.062042004783294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDAzJzQzLjQiTiAyOMKwNTAnNTcuOSJF!5e0!3m2!1str!2str!4v1785534433366!5m2!1str!2str"
-            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <!-- HARİTA & YOL TARİFİ -->
+        <div class="map-wrapper">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.3492017328244!2d28.845393183282354!3d41.06135894228082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa550d03d4215%3A0x1f77fd8eadb097ad!2zTWFzc2l0LCAxMDAuIFnEsWwsIDQuIENkLiBObzoxMzUsIDM0MjE4IEJhxJ9jxLFsYXIvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1793129519367!5m2!1str!2str"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+          <!-- Google Maps Yol Tarifi Butonu -->
+          <a href="https://maps.app.goo.gl/S49PDVV7nP7Pi7ia8" target="_blank" class="directions-btn">
+            📍 Google Haritalar'da Yol Tarifi Al
+          </a>
         </div>
+      </div> <!-- /.contact-info (Sol taraf burada bitiyor) -->
 
-      </div>
-
-      <!-- SAĞ TARAF -->
-      <div class="contact-form">
-
-        <h2>Bize Mesaj Gönderin</h2>
-
-        <form action="mail.php" method="POST">
-          <input type="text" name="ad" placeholder="Adınız" required>
-          <input type="email" name="email" placeholder="E-posta" required>
-          <textarea name="mesaj" placeholder="Mesajınız" required></textarea>
-          <button type="submit">Gönder</button>
-        </form>
-
+      <!-- SAĞ TARAF: BİZE MESAJ GÖNDERİN FORMU -->
+      <div class="contact-form-wrapper">
+        <div class="contact-form">
+          <h2>Bize Mesaj Gönderin</h2>
+          <form id="contact-form" action="mail.php" method="POST">
+            <input type="text" name="ad" placeholder="Adınız Soyadınız" required>
+            <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+            <input type="tel" name="telefon" placeholder="Telefon Numaranız">
+            <textarea name="mesaj" placeholder="Mesajınız ve Proje Detayları..." required></textarea>
+            <button type="submit">Gönder</button>
+            <p id="form-message"></p>
+          </form>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Merkez Kutu | İstanbul / Türkiye</p>
+  <!-- FOOTER (Esnek & Ortak) -->
+  <footer class="custom-minimal-footer">
+    <!-- Arka plan dev filigran yazı (global.css ile çalışır) -->
+    <div class="footer-watermark">MERKEZ KUTU</div>
+
+    <div class="container footer-content-wrapper">
+      <!-- Alt Satır (Telif Hakkı ve Sayfa Linkleri) -->
+      <div class="footer-bottom-row">
+        <div class="footer-copyright">© 2026 MERKEZ KUTU AMBALAJ - TÜM HAKLARI SAKLIDIR.</div>
+        <nav class="footer-nav-links">
+          <a href="index.html">ANA SAYFA</a>
+          <a href="kartonkutu.html">KARTON KUTU</a>
+          <a href="uretim.html">ÜRETİM SÜRECİMİZ</a>
+          <a href="hakkimizda.html">HAKKIMIZDA</a>
+          <a href="iletisim.html">İLETİŞİM</a>
+        </nav>
+      </div>
     </div>
   </footer>
 
+  <!-- JavaScript Dosyaları (Doğru konum: body kapanışından hemen önce) -->
+  <script src="js/app.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 
 </html>

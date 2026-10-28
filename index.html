@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Merkez Kutu | Ambalaj & Matbaa</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -17,13 +18,12 @@
 <body>
 
   <!-- NAVBAR -->
-  <!-- NAVBAR -->
   <header class="navbar">
     <div class="container nav-content">
 
       <!-- LOGO -->
       <a href="index.html" class="logo">
-        <img src="images/logo_merkez.png" alt="Merkez Kutu Logo">
+        <img src="images/optimize/logo_merkez.webp" alt="Merkez Kutu Logo">
       </a>
 
       <nav>
@@ -43,80 +43,220 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-content">
 
-    </div>
-  </section>
 
-  <!-- KISA TANITIM -->
-  <section class="about-short">
-    <div class="container">
-      <h2>Merkez Kutu</h2>
-      <p>
-        Karton kutu, ambalaj ve baskı çözümlerinde
-        kalite, hız ve güven odaklı üretim anlayışıyla hizmet veriyoruz.
-      </p>
-    </div>
-  </section>
 
-  <!-- HİZMET BAŞLIKLARI -->
-  <section class="categories">
-    <div class="container">
+  <section class="hero-section">
+    <div class="container hero-container">
 
-      <div class="category-grid">
+      <!-- Sol Sütun: Metin ve Butonlar -->
+      <div class="hero-content">
+        <span class="hero-category">AMBALAJ & MATBAA</span>
+        <h1 class="hero-title">Kaliteli Üretim,<br>Güvenilir Çözümler</h1>
+        <p class="hero-description">
+          Karton kutu, baskı, kesim ve yapıştırma süreçlerinde işletmenize özel fason üretim çözümleri sunuyoruz.
+        </p>
+        <div class="hero-buttons">
+          <!-- "Üretim Sürecimiz" sayfasına veya ilgili bölüme yönlendirir -->
+          <a href="uretim.html" class="btn hero-btn-primary">Hizmetlerimizi Keşfedin</a>
+          <a href="iletisim.html" class="btn hero-btn-outline">İletişime Geçin</a>
+        </div>
+      </div>
 
-        <div class="category-card">
-          <h3>Özel Kutu Üretimi</h3>
-          <p>İhtiyacınız olan tüm kutu modellerini, istediğiniz ebatlarda kusursuz ve firesiz şekilde üretiyoruz.</p>
+      <!-- Sağ Sütun: Makine Slider -->
+      <div class="hero-slider-wrapper">
+
+        <div class="hero-slide active">
+          <img src="images/optimize/std90mk.webp" alt="Omega Allpro 90 Yapıştırma Makinesi">
         </div>
 
-        <div class="category-card">
-          <h3>Canlı ve Net Baskılar</h3>
-          <p>Yüksek kaliteli matbaamız sayesinde markanızı rafta öne çıkaracak en canlı renkleri elde ediyoruz.</p>
+        <div class="hero-slide">
+          <img src="images/optimize/std110mk.webp" alt="Omega Allpro 110 Yapıştırma Makinesi">
         </div>
 
-        <div class="category-card">
-          <h3>Yüksek Üretim Kapasitesi</h3>
-          <p>Gelişmiş üretim bandımız sayesinde, en yüksek tirajlı siparişlerinizi bile kaliteden ödün vermeden kutuya
-            çeviriyoruz.
-          </p>
+        <div class="hero-slide">
+          <img src="images/optimize/stdasestat.webp" alt="Asetat Makinesi">
         </div>
 
-        <div class="category-card">
-          <h3>Usta İşçilik ve Güven</h3>
-          <p>İşin mutfağından gelen uzman ekibimizle, her projeye kendi işimiz gibi özen gösteriyoruz.</p>
+        <div class="hero-slide">
+          <img src="images/optimize/stdbobs.webp" alt="Asetat Makinesi">
         </div>
+
+        <div class="hero-slide">
+          <img src="images/optimize/stdofset.webp" alt="Asetat Makinesi">
+        </div>
+
+
+
+        <!-- Slider Kontrolleri -->
+        <button class="hero-slider-arrow prev-arrow" type="button" aria-label="Önceki Görsel">&#10094;</button>
+        <button class="hero-slider-arrow next-arrow" type="button" aria-label="Sonraki Görsel">&#10095;</button>
 
       </div>
     </div>
   </section>
 
 
-  <!-- İLETİŞİM -->
-  <section class="contact-cta">
+
+  <!-- HİZMET BAŞLIKLARI -->
+  <section class="categories">
     <div class="container">
-      <h2>Projeleriniz İçin Bizimle İletişime Geçin</h2>
-      <a href="https://api.whatsapp.com/send?phone=905321797157&text=Yapıştırma%20işi%20için%20teklif%20almak%20istiyorum"
-        class="btn">Hemen Teklif Al</a>
+
+      <div class="category-grid">
+        <a href="kartonkutu.html" class="feature-card-link">
+          <div class="category-card">
+            <h3>Özel Kutu Üretimi</h3>
+            <p>İhtiyacınız olan tüm kutu modellerini, istediğiniz ebatlarda kusursuz ve firesiz şekilde üretiyoruz.</p>
+          </div>
+        </a>
+
+        <a href="uretim.html" class="feature-card-link">
+          <div class="category-card">
+            <h3>Canlı ve Net Baskılar</h3>
+            <p>Yüksek kaliteli matbaamız sayesinde markanızı rafta öne çıkaracak en canlı renkleri elde ediyoruz.</p>
+          </div>
+        </a>
+
+        <a href="uretim.html" class="feature-card-link">
+          <div class="category-card">
+            <h3>Yüksek Üretim Kapasitesi</h3>
+            <p>Gelişmiş üretim bandımız sayesinde, en yüksek tirajlı siparişlerinizi bile kaliteden ödün vermeden kutuya
+              çeviriyoruz.
+            </p>
+          </div>
+        </a>
+
+        <a href="hakkimizda.html" class="feature-card-link">
+          <div class="category-card">
+            <h3>Usta İşçilik ve Güven</h3>
+            <p>İşin mutfağından gelen uzman ekibimizle, her projeye kendi işimiz gibi özen gösteriyoruz.</p>
+          </div>
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-content">
+  <section class="stats-counter-section">
+    <div class="container stats-grid">
 
-      <!-- Logo -->
-      <a href="index.html" class="footer-logo">
-        <img src="images/logo_merkez.png" alt="Merkez Kutu Logo">
-      </a>
+      <div class="stat-item">
+        <span class="stat-number">5</span>
+        <span class="stat-label">Gelişmiş Makine Hattı</span>
+      </div>
 
-      <!-- Telif -->
-      <p>© 2026 Merkez Kutu | İstanbul / Türkiye</p>
+      <div class="stat-item">
+        <span class="stat-number">%100</span>
+        <span class="stat-label">Zamanında Sevkiyat</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">Sıfır</span>
+        <span class="stat-label">Fire Toleransı</span>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-number">Yüksek</span>
+        <span class="stat-label">Tiraj Kapasitesi</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. MADDE: DİNAMİK HIZLI TEKLİF & WHATSAPP CTA ŞERİDİ -->
+  <section class="cta-banner-section">
+    <div class="container cta-banner-content">
+      <div class="cta-text">
+        <h2>Projeleriniz İçin Hemen Teklif Alın</h2>
+        <p>Yüksek tirajlı fason ambalaj ve kutu üretim ihtiyaçlarınızda profesyonel çözüm ortağınız.</p>
+      </div>
+      <div class="cta-buttons">
+        <a href="iletisim.html" class="cta-btn-primary">İletişime Geçin</a>
+        <a href="https://wa.me/905321797157" target="_blank" class="cta-btn-whatsapp">WhatsApp ile Görüşün</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERKEZ KUTU'YA ÖZEL MODERN & MİNİMALİST FOOTER -->
+  <footer class="custom-minimal-footer">
+
+    <!-- Arka Plan Dev Filigran Yazısı -->
+    <div class="footer-watermark">MERKEZ KUTU</div>
+
+    <div class="container footer-content-wrapper">
+
+      <!-- Ortadaki İletişim / Sosyal İkonlar -->
+      <div class="footer-social-icons">
+        <a href="iletisim.html" class="icon-circle" title="İletişim">
+          <span class="icon">✉️</span>
+        </a>
+        <a href="tel:+905321797157" class="icon-circle" title="Bizi Arayın">
+          <span class="icon">📞</span>
+        </a>
+        <a href="https://maps.app.goo.gl/C3YtiwwTtR3VLSMp7" target="_blank" class="icon-circle" title="Konum">
+          <span class="icon">📍</span>
+        </a>
+      </div>
+
+      <!-- Alt Bilgi ve Linkler Şeridi -->
+      <div class="footer-bottom-row">
+
+        <!-- Sol: Telif Hakkı -->
+        <div class="footer-copyright">
+          © 2026 MERKEZ KUTU AMBALAJ - TÜM HAKLARI SAKLIDIR.
+        </div>
+
+        <!-- Sağ: Hızlı Menü -->
+        <nav class="footer-nav-links">
+          <a href="index.html">ANA SAYFA</a>
+          <a href="kartonkutu.html">KARTON KUTU</a>
+          <a href="uretim.html">ÜRETİM SÜRECİMİZ</a>
+          <a href="hakkimizda.html">HAKKIMIZDA</a>
+          <a href="iletisim.html">İLETİŞİM</a>
+        </nav>
+
+      </div>
 
     </div>
   </footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const slides = document.querySelectorAll(".slide");
+      const prevBtn = document.querySelector(".prev-arrow");
+      const nextBtn = document.querySelector(".next-arrow");
+
+      // Başlangıçta gösterilecek slaytın sırası (0 = ilk slayt)
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        // Tüm slaytlardan görünürlük sınıfını kaldır
+        slides.forEach(slide => slide.classList.remove("active"));
+        // Sadece sırası gelen slayta görünürlük sınıfını ekle
+        slides[index].classList.add("active");
+      }
+
+      // Ok butonları ve slaytlar sayfada varsa tıklama olaylarını başlat
+      if (nextBtn && prevBtn && slides.length > 0) {
+
+        // Sağ ok - Sonraki Slayt
+        nextBtn.addEventListener("click", function () {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+        });
+
+        // Sol ok - Önceki Slayt
+        prevBtn.addEventListener("click", function () {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          showSlide(currentIndex);
+        });
+      }
+    });
+  </script>
+
+
+
 
 </body>
 

@@ -19,7 +19,7 @@ body {
   max-width: 180px;
   /* Logonun boyutunu buradaki değerle oynayarak ayarlayabilirsin */
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   /* Logonun altındaki yazıyla arasına boşluk bırakır */
 }
 
@@ -140,26 +140,260 @@ body {
   color: #d90429;
 }
 
-/* HERO */
-.hero-anasayfa {
-  height: 85vh;
-  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
-    url("../images/Gemini_Generated_Image_nfpslrnfpslrnfps.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-}
-
 .hero-content {
   width: 100%;
   max-width: 800px;
   margin: auto;
 }
+
+/* --- HERO SECTION (YENİ ÜST BÖLÜM) --- */
+.hero-section {
+  background-color: #fcfcfc;
+  /* Çok açık ferah gri arka plan */
+  padding: 80px 0;
+  border-bottom: 1px solid #eaeaea;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Sol Sütun - Metinler */
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-category {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #a11b1b;
+  /* Kurumsal kırmızı */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2b2b2b;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* Butonlar */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-btn-primary,
+.hero-btn-outline {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn-primary {
+  background-color: #a11b1b;
+  color: #ffffff;
+  border: 2px solid #a11b1b;
+}
+
+.hero-btn-primary:hover {
+  background-color: #851515;
+  border-color: #851515;
+}
+
+.hero-btn-outline {
+  background-color: transparent;
+  color: #2b2b2b;
+  border: 2px solid #dddddd;
+}
+
+.hero-btn-outline:hover {
+  border-color: #2b2b2b;
+}
+
+/* ==========================================================
+   SAĞ SÜTUN - SLİDER KAPSAYICISI (BEYAZ KART) DÜZELTMESİ
+   ========================================================== */
+.hero-slider-wrapper {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  /* Kartın maksimum genişliği dengelendi */
+  background-color: #ffffff;
+  /* Temiz stüdyo beyazı */
+  border-radius: 12px;
+  /* Yumuşatılmış modern köşeler */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+  /* Şık gölge efekti */
+  padding: 12px;
+  /* Görsel etrafındaki ince beyaz çerçeve */
+
+  /* KRİTİK DÜZELTME 1: Taşmaları tamamen engeller */
+  overflow: hidden;
+
+  /* KRİTİK DÜZELTME 2: İçindeki elemanları tam merkeze hizalar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================
+   SLAYT VE MAKİNE GÖRSELİ DÜZELTMESİ
+   ========================================================== */
+.hero-slide {
+  display: none;
+  width: 100%;
+  /* Slayt alanı kapsayıcıya tam oturur */
+}
+
+.hero-slide.active {
+  display: block;
+}
+
+.hero-slide img {
+  /* KRİTİK DÜZELTME 3: Görsel genişliğini dışarı taşmayacak şekilde kartın %100'üne sınırlar */
+  width: 100%;
+  max-width: 100%;
+
+  /* Yükseklik oranı sabiti (İsteğe göre 400px - 450px arası ayarlanabilir) */
+  height: 420px;
+
+  /* Görseli ezmeden veya bozmadan kutuya tam sığdırır */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  /* Resim köşelerini iç çerçeveyle uyumlu yapar */
+  display: block;
+}
+
+/* ==========================================================
+   SLİDER OK BUTONLARI HİZALAMASI
+   ========================================================== */
+.hero-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  color: #2b2b2b;
+  border: 1px solid #eeeeee;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slider-arrow:hover {
+  background-color: #a11b1b;
+  color: #ffffff;
+  border-color: #a11b1b;
+}
+
+/* Okları taşan beyaz kartın iç/dış sınırına tam oturtur */
+.prev-arrow {
+  left: 10px;
+}
+
+.next-arrow {
+  right: 10px;
+}
+
+/* Yumuşak Geçiş Animasyonu */
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- MOBİL UYUM (RESPONSIVE) --- */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-slider-wrapper {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .hero-slide img {
+    height: 250px;
+  }
+
+  .prev-arrow {
+    left: -10px;
+  }
+
+  .next-arrow {
+    right: -10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+}
+
+/* Sağ kenardan 30px boşluk */
+
+
+
+
+
+
+
 
 
 
@@ -179,16 +413,6 @@ body {
   background: #ef233c;
 }
 
-/* ABOUT SHORT */
-.about-short {
-  background-color: tomato;
-  padding: 60px 0;
-  text-align: center;
-}
-
-.about-short h2 {
-  margin-bottom: 20px;
-}
 
 /* CATEGORIES */
 .categories {
@@ -202,14 +426,11 @@ body {
   gap: 20px;
 }
 
-.category-card p {
-  margin-top: 12px;
-  font-size: 14px;
-  color: #555;
-}
-
-.category-card:hover p {
-  color: white;
+/* Link etiketinin kart düzenini ve yüksekliğini bozmaması için temel ayar */
+.feature-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .category-card {
@@ -219,16 +440,328 @@ body {
   border: 1px solid #eee;
   transition: .3s;
   cursor: pointer;
+  height: 100%;
+  /* Tüm kartların eşit yükseklikte kalmasını sağlar */
 }
 
+.category-card p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #555;
+  transition: color .3s;
+}
+
+/* Üzerine gelindiğinde kart arka planı ve yazılar */
+.feature-card-link:hover .category-card,
 .category-card:hover {
   background: #d90429;
   color: white;
 }
 
+.feature-card-link:hover .category-card p,
+.category-card:hover p {
+  color: white;
+}
+
+/* RESPONSIVE (MOBİL UYUM) */
+@media (max-width: 992px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Tabletlerde 2'li sütun */
+  }
+}
+
+@media (max-width: 576px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+    /* Mobilde tek sütun */
+  }
+}
+
+/* ==========================================================
+   ÖZGÜN & MİNİMALİST FİLİGRANLI FOOTER (MERKEZ KUTU KONSEPTİ)
+   ========================================================== */
+
+.custom-minimal-footer {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f2f4f7 50%, #e5e8ed 100%);
+  padding: 80px 0 35px 0;
+  overflow: hidden;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Arka plandaki Dev Filigran Yazı */
+.footer-watermark {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(60px, 11vw, 150px);
+  /* Ekran boyutuna göre otomatik ölçeklenir */
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.035);
+  /* Çok hafif, rahatsız etmeyen şık filigran */
+  letter-spacing: 12px;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.footer-content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* İkon Halkaları */
+.footer-social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #2b2b2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.icon-circle .icon {
+  font-size: 20px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.icon-circle:hover {
+  border-color: #a11b1b;
+  /* Merkez Kutu kırmızısı */
+  background-color: #a11b1b;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(161, 27, 27, 0.25);
+}
+
+.icon-circle:hover .icon {
+  filter: grayscale(0%) brightness(200%);
+  transform: scale(1.1);
+}
+
+/* Alt Satır Düzeni */
+.footer-bottom-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-copyright {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+  letter-spacing: 1px;
+}
+
+.footer-nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-nav-links a {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav-links a:hover {
+  color: #a11b1b;
+  /* Amblem kırmızısı */
+}
+
+/* RESPONSIVE (MOBİL UYUM) */
+@media (max-width: 850px) {
+  .footer-bottom-row {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+/* ==========================================================
+   İSTATİSTİK ŞERİDİ VE CTA BANNER TASARIMLARI
+   ========================================================== */
+
+/* 1. İstatistik Şeridi Stilleri */
+.stats-counter-section {
+  background-color: #1a1a1a;
+  /* Koyu antrasit kurumsal zemin */
+  color: #ffffff;
+  padding: 50px 0;
+  border-top: 3px solid #a11b1b;
+  border-bottom: 3px solid #a11b1b;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-number {
+  font-size: 42px;
+  font-weight: 800;
+  color: #d90429;
+  /* Canlı amblem kırmızısı */
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #dddddd;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* 2. Dinamik CTA Banner Stilleri */
+.cta-banner-section {
+  background: linear-gradient(135deg, #1f1f1f 0%, #111111 100%);
+  padding: 60px 0;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.cta-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.cta-text p {
+  font-size: 15px;
+  color: #aaaaaa;
+  margin: 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.cta-btn-primary {
+  background-color: #a11b1b;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(161, 27, 27, 0.4);
+}
+
+.cta-btn-primary:hover {
+  background-color: #d90429;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 4, 41, 0.5);
+}
+
+.cta-btn-whatsapp {
+  background-color: #25d366;
+  /* WhatsApp yeşili */
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.cta-btn-whatsapp:hover {
+  background-color: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* RESPONSIVE (MOBİL UYUM) */
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .cta-banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-btn-primary,
+  .cta-btn-whatsapp {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
 /* REFERENCES */
-
-
 /* CONTACT CTA */
 .contact-cta {
   padding: 60px 0;
@@ -280,6 +813,7 @@ body {
   }
 }
 
+-------------------------
 /* CATALOG PAGE */
 
 .catalog-section {
@@ -328,220 +862,272 @@ body {
   }
 }
 
+/* ==========================================================
+   HAKKIMIZDA SAYFASI ÖZEL TASARIM KODLARI
+   ========================================================== */
 
-
-.about-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 2rem;
+/* 1. HERO BANNER */
+.about-hero-banner {
+  background-color: #1f1f1f;
+  /* Koyu şık stüdyo tonu */
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 3px solid #a11b1b;
 }
 
-.about-gallery-item {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 14px;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-}
-
-.about-gallery-item img {
-  width: 100%;
-  height: 98%;
-  object-fit: cover;
+.about-subtitle {
+  color: #a11b1b;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   display: block;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .about-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .about-gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ABOUT CONTENT */
-
-.about-content {
-  padding: 80px 0;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-}
-
-.about-content h1 {
-  margin-bottom: 20px;
-}
-
-.about-content h2 {
-  margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.about-content p {
-  color: #555;
-  line-height: 1.8;
+.about-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-/* --- MACHINE SECTION --- */
-.slider {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: #050505;
+.about-lead {
+  font-size: 16px;
+  color: #cccccc;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+/* 2. HİKAYEMİZ & İKİ SÜTUNLU ALAN */
+.about-main-section {
+  padding: 80px 0;
+  background-color: #fcfcfc;
 }
 
-.slide {
-  flex: 0 0 100vw;
-  height: 100vh;
-  position: relative;
+.about-grid-container {
   display: flex;
   align-items: center;
-  /* Dikeyde ortala */
-  overflow: hidden;
+  gap: 50px;
 }
 
-/* 🔥 ARKA PLANDAKİ BOŞLUĞU DOLDURAN BLUR EFEKTİ */
-.slide::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.about-text-content {
+  flex: 1;
+}
+
+.about-text-content h2 {
+  font-size: 30px;
+  color: #222222;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.about-text-content p {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.about-features-boxes {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #a11b1b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card h4 {
+  font-size: 16px;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Sağ Sütun Beyaz Stüdyo Görsel Kartı */
+.about-visual-card {
+  flex: 1;
+}
+
+.about-visual-inner {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.about-visual-inner img {
   width: 100%;
-  height: 100%;
-  background-image: var(--bg);
-  /* HTML'den gelen değişken */
-  background-size: cover;
-  background-position: center;
-  filter: blur(60px) brightness(0.3);
-  /* Makinayı öne çıkarmak için kararttık */
-  z-index: 1;
-  transform: scale(1.1);
-  /* Kenarlardaki beyazlıkları gizlemek için hafif büyüttük */
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }
 
-.slide-text {
-  flex: 0 0 40vw;
-  /* Biraz daha genişlettik */
-  padding: 0 5vw;
+.visual-badge {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border-left: 3px solid #a11b1b;
+}
+
+.visual-badge span {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.visual-badge small {
+  color: #dddddd;
+  font-size: 12px;
+}
+
+/* 3. MAKİNE PARKURU GRID BÖLÜMÜ */
+.machinery-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #eeeeee;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+.section-header-center h2 {
+  font-size: 32px;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.section-header-center p {
+  font-size: 15px;
+  color: #666666;
+}
+
+.machinery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2x2 Şık Izgara */
+  gap: 30px;
+}
+
+.machine-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: white;
-  z-index: 5;
-  /* Metnin arkasına hafif bir koyuluk vererek okunabilirliği garantiledik */
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 40%, transparent);
-  height: 100%;
 }
 
-.slide-text h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  line-height: 1.1;
+/* 5. Makinenin (Ofset Baskı Parkuru) 2'li düzende alt satırda tam genişlikte yayılması için */
+.machine-card-wide {
+  grid-column: span 2;
 }
 
-.slide-text p {
-  font-size: 1.2rem;
-  border-left: 4px solid #ff0000;
-  /* Varsa şirket rengin */
-  padding-left: 15px;
-  color: #ccc;
+.machine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-color: #a11b1b;
 }
 
-.slide img {
-  flex: 1;
-  max-height: 85vh;
-  /* Üstten ve alttan az bir boşluk estetik durur */
-  width: auto;
-  object-fit: contain;
-  z-index: 2;
-  /* Makineye derinlik katmak için hafif gölge */
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.5));
-  padding-right: 5vw;
-}
-
-/* Navigasyon Butonları */
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 60px;
-  height: 60px;
+.machine-img-box {
+  width: 100%;
+  height: 340px;
+  /* 260px'den 340px'e çıkarılarak dikey alan genişletildi */
+  background-color: #f8f8f8;
+  /* Makinelerin etrafında temiz stüdyo tonu */
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-  transition: 0.3s;
+  overflow: hidden;
+  padding: 15px;
+  /* Görselin kutu içine rahat sığması için pay */
 }
 
-.prev:hover,
-.next:hover {
-  background: white;
-  color: black;
+.machine-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
 }
 
-.prev {
-  left: 30px;
+.machine-card:hover .machine-img-box img {
+  transform: scale(1.03);
+  /* Üzerine gelince çok hafif ve şık bir büyüme efekti */
 }
 
-.next {
-  right: 30px;
+.machine-info {
+  padding: 25px;
+  flex: 1;
 }
 
-/* Mobilde görsellerin ve metnin alt alta gelmesi için */
-@media (max-width: 768px) {
-  .slide {
+.machine-info h3 {
+  font-size: 20px;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.machine-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #a11b1b;
+  background-color: #fdf0f0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.machine-info p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* RESPONSIVE (MOBİL UYUM) */
+@media (max-width: 992px) {
+  .about-grid-container {
     flex-direction: column;
   }
 
-  .slide-text {
-    flex: 0 0 40%;
-    width: 100%;
-    text-align: center;
+  .machinery-grid {
+    grid-template-columns: 1fr;
+    /* Mobilde tek sütun */
   }
 
-  .slide img {
-    height: 50%;
+  .machine-card-wide {
+    grid-column: span 1;
+    /* Mobilde geniş kart da tek sütuna uyarlanır */
+  }
+
+  .about-features-boxes {
+    flex-direction: column;
   }
 }
-
-/* Responsive */
-
-@media(max-width: 992px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .machine-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 /*   */
 .contact-page {
@@ -551,7 +1137,9 @@ body {
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  /* Sol ve sağ sütunu eşit böler */
+  gap: 40px;
+  align-items: start;
 }
 
 .contact-info h1 {
@@ -563,73 +1151,119 @@ body {
   color: #555;
 }
 
-.map {
+/* Harita ve Yol Tarifi Butonu Stilleri */
+.map-wrapper {
   margin-top: 20px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
-/* FORM */
+.map iframe {
+  border-radius: 8px;
+  display: block;
+}
+
+.directions-btn {
+  display: block;
+  text-align: center;
+  background-color: #1a1a1a;
+  /* Kurumsal koyu antrasit */
+  color: #ffffff;
+  padding: 12px 18px;
+  margin-top: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.directions-btn:hover {
+  background-color: #a11b1b;
+  /* Merkez Kutu amblem kırmızısı */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(161, 27, 27, 0.3);
+}
+
+/* İLETİŞİM FORMU GELİŞMİŞ STİLLERİ */
 .contact-form {
-  background: #fff;
-  padding: 30px;
+  background: #ffffff;
+  padding: 35px 30px;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
 }
 
 .contact-form h2 {
-  margin-bottom: 25px;
-  font-size: 28px;
-  color: #111;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 20px;
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
   width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  padding: 13px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #fafafa;
   outline: none;
-  font-size: 15px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus {
-  border-color: #d90429;
-  box-shadow: 0 0 0 3px rgba(217, 4, 41, 0.12);
+  border-color: #a11b1b;
+  /* Merkez Kutu kırmızısı */
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(161, 27, 27, 0.1);
+}
+
+.contact-form select.form-select {
+  cursor: pointer;
 }
 
 .contact-form textarea {
-  min-height: 170px;
   resize: vertical;
+  min-height: 120px;
 }
 
-.contact-form button {
-  background: #d90429;
-  color: #fff;
+.contact-form button[type="submit"] {
+  width: 100%;
+  background-color: #a11b1b;
+  color: #ffffff;
   padding: 14px;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(161, 27, 27, 0.25);
 }
 
-.contact-form button:hover {
-  background: #b70324;
+.contact-form button[type="submit"]:hover {
+  background-color: #d90429;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(217, 4, 41, 0.35);
 }
 
 /* RESPONSIVE */
 
-@media(max-width: 768px) {
+@media (max-width: 850px) {
   .contact-grid {
     grid-template-columns: 1fr;
+    /* Mobilde alt alta geçer */
   }
 }
 
@@ -955,48 +1589,5 @@ body {
 
   .grid {
     grid-template-columns: 1fr;
-  }
-}
-
-
-/* MOBİL MENÜ */
-
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: #333;
-}
-
-/* Sadece telefon ekranlarında geçerli olacak ayarlar */
-@media (max-width: 768px) {
-
-
-
-  /* İKONU MOBİLDE GÖRÜNÜR YAPAN KOD BURASI */
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #f2f2f0;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    padding: 20px 0;
-    text-align: center;
-    z-index: 1000;
-  }
-
-  /* JavaScript ile bu sınıf eklendiğinde menü görünür olacak */
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 15px 0;
   }
 }

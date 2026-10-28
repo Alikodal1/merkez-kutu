@@ -5,9 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Üretim Sürecimiz – Merkez Kutu</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/uretim.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 
 <body>
 
@@ -16,7 +17,7 @@
     <div class="container nav-content">
 
       <a href="index.html" class="logo">
-        <img src="images/logo_merkez.png" alt="Merkez Kutu Logo">
+        <img src="images/optimize/logo_merkez.webp" alt="Merkez Kutu Logo">
       </a>
 
       <nav>
@@ -61,24 +62,14 @@
     <button class="filter-btn active" data-filter="all">Tümü</button>
     <button class="filter-btn" data-filter="yapistirma">Yapıştırma</button>
     <button class="filter-btn" data-filter="kesim">Kesim</button>
-    <button class="filter-btn" data-filter="Asetat">Asetat</button>
+    <button class="filter-btn" data-filter="asetat">Asetat</button>
     <button class="filter-btn" data-filter="baski">Baskı</button>
   </div>
 
   <!-- VIDEO GRID -->
-  <!--
-  ============================================================
-  NASIL YENİ VİDEO EKLENİR?
-  Aşağıdaki kartlardan birini kopyalayıp yapıştırın ve şunları değiştirin:
-    1. data-cat  →  "yapistirma" | "kesim" | "dizim" | "baski"
-    2. <video src="...">  →  videonuzun dosya yolu (ör: videos/yeni.mp4)
-    3. .card-tag sınıfı  →  tag-yapistirma | tag-kesim | tag-dizim | tag-baski
-    4. Etiket metni, başlık (.card-title) ve açıklamayı (.card-desc) güncelleyin
-    5. .duration içindeki süreyi güncelleyin (ör: 0:45)
-  ============================================================
--->
   <div class="grid" id="video-grid">
 
+    <!-- KART 1 -->
     <article class="video-card" data-cat="yapistirma">
       <div class="video-thumb">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MbU97jxXKBU" loading="lazy"
@@ -86,16 +77,12 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">0:31</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-yapistirma">Yapıştırma</span>
         <div class="card-title">4 / 6 / 7 Nokta Yapıştırma</div>
-        <div class="card-desc">
-          Kutu yapıştırma işlemleri yüksek hassasiyetle gerçekleştirilir.
-        </div>
+        <div class="card-desc">Kutu yapıştırma işlemleri yüksek hassasiyetle gerçekleştirilir.</div>
       </div>
     </article>
 
@@ -107,16 +94,12 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">0:45</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-yapistirma">Yapıştırma</span>
         <div class="card-title">4 / 6 / 7 Nokta Yapıştırma</div>
-        <div class="card-desc">
-          Kutu yapıştırma işlemleri yüksek hassasiyetle gerçekleştirilir.
-        </div>
+        <div class="card-desc">Kutu yapıştırma işlemleri yüksek hassasiyetle gerçekleştirilir.</div>
       </div>
     </article>
 
@@ -128,16 +111,12 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">0:28</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-yapistirma">Yapıştırma</span>
         <div class="card-title">Seperatörlü Kutu</div>
-        <div class="card-desc">
-          Kutu yapıştırma işlemleri yüksek hassasiyetle gerçekleştirilir.
-        </div>
+        <div class="card-desc">Kutu yapıştırma işlemleri yüksek hassasiyetle gerçekleştirilir.</div>
       </div>
     </article>
 
@@ -149,16 +128,12 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">0:30</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-kesim">Kesim</span>
         <div class="card-title">Bobst Kesim</div>
-        <div class="card-desc">
-          Yüksek hızlı Bobst makinesiyle hassas kutu kesim operasyonu.
-        </div>
+        <div class="card-desc">Yüksek hızlı Bobst makinesiyle hassas kutu kesim operasyonu.</div>
       </div>
     </article>
 
@@ -170,25 +145,14 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">0:31</span>
       </div>
-
       <div class="card-body">
-        <span class="card-tag tag-yapistirma">Kesim</span>
-
-        <div class="card-title">
-          Bobst Kesim
-        </div>
-
-        <div class="card-desc">
-          Yüksek hızlı Bobst makinesiyle hassas kutu kesim operasyonu.
-        </div>
+        <span class="card-tag tag-kesim">Kesim</span>
+        <div class="card-title">Bobst Kesim</div>
+        <div class="card-desc">Yüksek hızlı Bobst makinesiyle hassas kutu kesim operasyonu.</div>
       </div>
     </article>
-
-
-
 
     <!-- KART 6 -->
     <article class="video-card" data-cat="yapistirma">
@@ -198,61 +162,52 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">0:30</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-yapistirma">Yapıştırma</span>
         <div class="card-title">Yapıştırma</div>
-        <div class="card-desc">
-          Standart karton kutu yapıştırma işlemi hızlı ve verimli şekilde yapılır.
-        </div>
+        <div class="card-desc">Standart karton kutu yapıştırma işlemi hızlı ve verimli şekilde yapılır.</div>
       </div>
     </article>
 
     <!-- KART 7 -->
-    <article class="video-card" data-cat="Asetat">
+    <article class="video-card" data-cat="asetat">
       <div class="video-thumb">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GiWan0jOER8" loading="lazy" title="Asetat"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">0:22</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-asetat">Asetat</span>
         <div class="card-title">Asetat</div>
-        <div class="card-desc">
-          Otomatik asetat makinemizde, her ebatta kutu penceresine milimetrik hassasiyetle şeffaf film uyguluyoruz.
-        </div>
+        <div class="card-desc">Otomatik asetat makinemizde, her ebatta kutu penceresine milimetrik hassasiyetle şeffaf
+          film uyguluyoruz.</div>
       </div>
     </article>
 
     <!-- KART 8 -->
-    <article class="video-card" data-cat="Asetat">
+    <article class="video-card" data-cat="asetat">
       <div class="video-thumb">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tJneQWLI82Q" loading="lazy" title="Asetat"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">0:28</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-asetat">Asetat</span>
         <div class="card-title">Asetat</div>
-        <div class="card-desc">
-          Ürününüzü rafta görünür kılan şeffaf pencereleri, kusursuz bir işçilikle kutularınıza entegre ediyoruz.
-        </div>
+        <div class="card-desc">Ürününüzü rafta görünür kılan şeffaf pencereleri, kusursuz bir işçilikle kutularınıza
+          entegre ediyoruz.</div>
       </div>
     </article>
-    <!-- kart 9 -->
+
+    <!-- KART 9 -->
     <article class="video-card" data-cat="yapistirma">
       <div class="video-thumb">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/spcs-NCd8-k" loading="lazy"
@@ -260,21 +215,16 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">1:39</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-yapistirma">Yapıştırma</span>
         <div class="card-title">Geçmeli kapak kutu</div>
-        <div class="card-desc">
-          İhtiyaca özel üretilen, özgün ve fonksiyonel kutu çözümleri.
-        </div>
+        <div class="card-desc">İhtiyaca özel üretilen, özgün ve fonksiyonel kutu çözümleri.</div>
       </div>
     </article>
 
-
-    <!-- kart 10 -->
+    <!-- KART 10 -->
     <article class="video-card" data-cat="yapistirma">
       <div class="video-thumb">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/uPf_i0q1A8g" loading="lazy"
@@ -282,20 +232,16 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">0:46</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-yapistirma">Yapıştırma</span>
         <div class="card-title">Konik (Külah) Model kutu</div>
-        <div class="card-desc">
-          Yüksek hassasiyetli kesim, estetik ve pratik gıda ambalajı.
-        </div>
+        <div class="card-desc">Yüksek hassasiyetli kesim, estetik ve pratik gıda ambalajı.</div>
       </div>
     </article>
 
-    <!-- kart 11-->
+    <!-- KART 11 -->
     <article class="video-card" data-cat="yapistirma">
       <div class="video-thumb">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gG9zm1Lw1NU" loading="lazy"
@@ -303,21 +249,16 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
-
         <span class="duration">1:02</span>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-yapistirma">Yapıştırma</span>
         <div class="card-title">Patates ve Atıştırmalık Kutusu</div>
-        <div class="card-desc">
-          Gıdaya uygun, pratik kullanımlı ve estetik atıştırmalık çözümü.
-        </div>
+        <div class="card-desc">Gıdaya uygun, pratik kullanımlı ve estetik atıştırmalık çözümü.</div>
       </div>
     </article>
 
-
-    <!-- kart 12 -->
+    <!-- KART 12 -->
     <article class="video-card" data-cat="yapistirma">
       <div class="video-thumb">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VO0NnIBpUzc" loading="lazy"
@@ -326,22 +267,13 @@
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
       </div>
-
       <div class="card-body">
         <span class="card-tag tag-yapistirma">Yapıştırma</span>
-
-        <div class="card-title">
-          Külah Kutu
-        </div>
-
-        <div class="card-desc">
-          Sokak lezzetleri için özel tasarlanmış, ergonomik ve sızdırmaz yapılı estetik külah çözümü.
-        </div>
+        <div class="card-title">Külah Kutu</div>
+        <div class="card-desc">Sokak lezzetleri için özel tasarlanmış, ergonomik ve sızdırmaz yapılı estetik külah
+          çözümü.</div>
       </div>
     </article>
-
-
-    <!-- ++ BURAYA YENİ KARTLAR EKLEYEBİLİRSİNİZ ++ -->
 
   </div>
 
@@ -357,10 +289,25 @@
     </div>
   </div>
 
-  <script src="js/app.js">
+  <footer class="custom-minimal-footer">
+    <div class="footer-watermark">MERKEZ KUTU</div>
+    <div class="container footer-content-wrapper">
 
-  </script>
+      <div class="footer-bottom-row">
+        <div class="footer-copyright">© 2026 MERKEZ KUTU AMBALAJ - TÜM HAKLARI SAKLIDIR.</div>
+        <nav class="footer-nav-links">
+          <a href="index.html">ANA SAYFA</a>
+          <a href="kartonkutu.html">KARTON KUTU</a>
+          <a href="uretim.html">ÜRETİM SÜRECİMİZ</a>
+          <a href="hakkimizda.html">HAKKIMIZDA</a>
+          <a href="iletisim.html">İLETİŞİM</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
 
+
+  <script src="js/app.js"></script>
 </body>
 
 </html>

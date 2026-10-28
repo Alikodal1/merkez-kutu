@@ -1,0 +1,522 @@
+/* HERO */
+
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* --- HERO SECTION (YENİ ÜST BÖLÜM) --- */
+.hero-section {
+    background-color: #fcfcfc;
+    /* Çok açık ferah gri arka plan */
+    padding: 80px 0;
+    border-bottom: 1px solid #eaeaea;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Sol Sütun - Metinler */
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-category {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #a11b1b;
+    /* Kurumsal kırmızı */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2b2b2b;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* Butonlar */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-btn-primary,
+.hero-btn-outline {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-btn-primary {
+    background-color: #a11b1b;
+    color: #ffffff;
+    border: 2px solid #a11b1b;
+}
+
+.hero-btn-primary:hover {
+    background-color: #851515;
+    border-color: #851515;
+}
+
+.hero-btn-outline {
+    background-color: transparent;
+    color: #2b2b2b;
+    border: 2px solid #dddddd;
+}
+
+.hero-btn-outline:hover {
+    border-color: #2b2b2b;
+}
+
+/* ==========================================================
+   SAĞ SÜTUN - SLİDER KAPSAYICISI (BEYAZ KART)
+   ========================================================== */
+.hero-slider-wrapper {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    /* Kartın maksimum genişliği dengelendi */
+    background-color: #ffffff;
+    /* Temiz stüdyo beyazı */
+    border-radius: 12px;
+    /* Yumuşatılmış modern köşeler */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+    /* Şık gölge efekti */
+    padding: 12px;
+    /* Görsel etrafındaki ince beyaz çerçeve */
+
+    /* KRİTİK DÜZELTME 1: Taşmaları tamamen engeller */
+    overflow: hidden;
+
+    /* KRİTİK DÜZELTME 2: İçindeki elemanları tam merkeze hizalar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =================================
+   SLAYT VE MAKİNE GÖRSELİ
+   ================================*/
+.hero-slide {
+    display: none;
+    width: 100%;
+    /* Slayt alanı kapsayıcıya tam oturur */
+}
+
+.hero-slide.active {
+    display: block;
+}
+
+.hero-slide img {
+    /* KRİTİK DÜZELTME 3: Görsel genişliğini dışarı taşmayacak şekilde kartın %100'üne sınırlar */
+    width: 100%;
+    max-width: 100%;
+
+    /* Yükseklik oranı sabiti (İsteğe göre 400px - 450px arası ayarlanabilir) */
+    height: 420px;
+
+    /* Görseli ezmeden veya bozmadan kutuya tam sığdırır */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    /* Resim köşelerini iç çerçeveyle uyumlu yapar */
+    display: block;
+}
+
+/* ==========================================================
+   SLİDER OK BUTONLARI HİZALAMASI
+   ========================================================== */
+.hero-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #2b2b2b;
+    border: 1px solid #eeeeee;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider-arrow:hover {
+    background-color: #a11b1b;
+    color: #ffffff;
+    border-color: #a11b1b;
+}
+
+/* Okları taşan beyaz kartın iç/dış sınırına tam oturtur */
+.prev-arrow {
+    left: 10px;
+}
+
+.next-arrow {
+    right: 10px;
+}
+
+/* Yumuşak Geçiş Animasyonu */
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* --- MOBİL UYUM (RESPONSIVE) --- */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-slider-wrapper {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .hero-slide img {
+        height: 250px;
+    }
+
+    .prev-arrow {
+        left: -10px;
+    }
+
+    .next-arrow {
+        right: -10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+}
+
+/* Sağ kenardan 30px boşluk */
+
+
+
+
+
+
+
+
+
+
+/*HEMEN TEKLİF AL BUTONU  */
+.btn {
+    background: #d90429;
+    position: relative;
+    top: 20px;
+    padding: 10px 28px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #ef233c;
+}
+
+/* ABOUT SHORT */
+.about-short {
+    background-color: tomato;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-short h2 {
+    margin-bottom: 20px;
+}
+
+/* CATEGORIES */
+.categories {
+    padding: 60px 0;
+    background: #f5f5f5;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Link etiketinin kart düzenini ve yüksekliğini bozmaması için temel ayar */
+.feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.category-card {
+    background: white;
+    padding: 40px 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: .3s;
+    cursor: pointer;
+    height: 100%;
+    /* Tüm kartların eşit yükseklikte kalmasını sağlar */
+}
+
+.category-card p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+    transition: color .3s;
+}
+
+/* Üzerine gelindiğinde kart arka planı ve yazılar */
+.feature-card-link:hover .category-card,
+.category-card:hover {
+    background: #d90429;
+    color: white;
+}
+
+.feature-card-link:hover .category-card p,
+.category-card:hover p {
+    color: white;
+}
+
+/* RESPONSIVE (MOBİL UYUM) */
+@media (max-width: 992px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Tabletlerde 2'li sütun */
+    }
+}
+
+@media (max-width: 576px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        /* Mobilde tek sütun */
+    }
+}
+
+
+/* ==========================================================
+   İSTATİSTİK ŞERİDİ VE CTA BANNER TASARIMLARI
+   ========================================================== */
+
+/* 1. İstatistik Şeridi Stilleri */
+.stats-counter-section {
+    background-color: #1a1a1a;
+    /* Koyu antrasit kurumsal zemin */
+    color: #ffffff;
+    padding: 50px 0;
+    border-top: 3px solid #a11b1b;
+    border-bottom: 3px solid #a11b1b;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #d90429;
+    /* Canlı amblem kırmızısı */
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #dddddd;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* 2. Dinamik CTA Banner Stilleri */
+.cta-banner-section {
+    background: linear-gradient(135deg, #1f1f1f 0%, #111111 100%);
+    padding: 60px 0;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.cta-text p {
+    font-size: 15px;
+    color: #aaaaaa;
+    margin: 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.cta-btn-primary {
+    background-color: #a11b1b;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(161, 27, 27, 0.4);
+}
+
+.cta-btn-primary:hover {
+    background-color: #d90429;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(217, 4, 41, 0.5);
+}
+
+.cta-btn-whatsapp {
+    background-color: #25d366;
+    /* WhatsApp yeşili */
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.cta-btn-whatsapp:hover {
+    background-color: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* RESPONSIVE (MOBİL UYUM) */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .cta-banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-btn-primary,
+    .cta-btn-whatsapp {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*mobilde menü gizler*/
+@media(max-width: 600px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

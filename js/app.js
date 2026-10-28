@@ -1,3 +1,60 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".hero-slide");
+  const prevBtn = document.querySelector(".prev-arrow");
+  const nextBtn = document.querySelector(".next-arrow");
+
+  let currentIndex = 0;
+  let slideInterval; // Otomatik geçiş zamanlayıcısı
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  if (slides.length > 0) {
+    // 1. Ok butonlarına tıklama olayları
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener("click", function () {
+        nextSlide();
+        resetTimer(); // Kullanıcı tıkladığında sayacı sıfırlar, ani atlamayı önler
+      });
+
+      prevBtn.addEventListener("click", function () {
+        prevSlide();
+        resetTimer();
+      });
+    }
+
+    // 2. Otomatik Geçiş Başlatma (Her 4 saniyede bir - süreyi 4000 yazan yerden değiştirebilirsin)
+    function startTimer() {
+      slideInterval = setInterval(nextSlide, 4000);
+    }
+
+    function resetTimer() {
+      clearInterval(slideInterval);
+      startTimer();
+    }
+
+    startTimer(); // Otomatik döngüyü çalıştır
+  }
+});
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   /* ── Makine slider (sadece slider olan sayfada çalışır) ── */
   const slides = document.querySelector(".slides");
@@ -28,6 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
       update();
     });
   }
+
+
+
 
   /* ── Hamburger menü (sadece nav'ı olan sayfada çalışır) ── */
   const menuToggle = document.getElementById("menu-btn");
