@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/iletisim.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- WhatsApp ve Telefon ikonları için FontAwesome kütüphanesi -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -37,7 +39,10 @@
       <!-- SOL TARAF: İLETİŞİM BİLGİLERİ VE HARİTA -->
       <div class="contact-info">
         <h1>İletişim</h1>
-        <p><strong>Telefon:</strong> +90 536 482 6304 & +90 532 179 7157</p>
+        <p><strong>Telefon:</strong>
+          <a href="tel:+905364826304" style="color: inherit; text-decoration: none;">+90 536 482 6304</a> &
+          <a href="tel:+905321797157" style="color: inherit; text-decoration: none;">+90 532 179 7157</a>
+        </p>
         <p><strong>E-posta :</strong> info@merkezkutu.com</p>
         <p><strong>Adres:</strong> Massit, 100. Yıl, 4. Cd. No:135, Bağcılar/İstanbul</p>
         <strong>Çalışma Saatlerimiz:</strong>
@@ -59,20 +64,32 @@
             📍 Google Haritalar'da Yol Tarifi Al
           </a>
         </div>
-      </div> <!-- /.contact-info (Sol taraf burada bitiyor) -->
+      </div> <!-- /.contact-info -->
 
-      <!-- SAĞ TARAF: BİZE MESAJ GÖNDERİN FORMU -->
+      <!-- SAĞ TARAF: HIZLI İLETİŞİM (WHATSAPP & TELEFON BUTONLARI) -->
       <div class="contact-form-wrapper">
         <div class="contact-form">
-          <h2>Bize Mesaj Gönderin</h2>
-          <form id="contact-form" action="mail.php" method="POST">
-            <input type="text" name="ad" placeholder="Adınız Soyadınız" required>
-            <input type="email" name="email" placeholder="E-posta Adresiniz" required>
-            <input type="tel" name="telefon" placeholder="Telefon Numaranız">
-            <textarea name="mesaj" placeholder="Mesajınız ve Proje Detayları..." required></textarea>
-            <button type="submit">Gönder</button>
-            <p id="form-message"></p>
-          </form>
+          <h2>Bize Hemen Ulaşın</h2>
+          <p style="margin-bottom: 25px; color: #555;">Sipariş, fiyat teklifi ve detaylı bilgi için doğrudan telefonla
+            arayabilir veya WhatsApp üzerinden mesaj gönderebilirsiniz.</p>
+
+          <div class="quick-contact-buttons" style="display: flex; flex-direction: column; gap: 15px;">
+            <!-- WhatsApp 1 -->
+            <a href="https://wa.me/905364826304?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Bilgi%20almak%20istiyorum."
+              target="_blank" class="whatsapp-btn"
+              style="background-color: #25d366; color: white; padding: 15px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; transition: 0.3s;">
+              <i class="fab fa-whatsapp" style="font-size: 22px;"></i> WhatsApp ile Destek Al
+            </a>
+
+            <!-- Telefon Arama -->
+            <a href="tel:+905364826304" class="phone-btn"
+              style="background-color: #0056b3; color: white; padding: 15px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; transition: 0.3s;">
+              <i class="fas fa-phone-alt" style="font-size: 20px;"></i> Hemen Telefonla Ara (+90 532 179 71 57)
+            </a>
+
+            <!-- Telefon Arama 2 -->
+
+          </div>
         </div>
       </div>
 
@@ -99,9 +116,8 @@
     </div>
   </footer>
 
-  <!-- JavaScript Dosyaları (Doğru konum: body kapanışından hemen önce) -->
+  <!-- JavaScript Dosyaları -->
   <script src="js/app.js"></script>
-  <script src="js/contact.js"></script>
 </body>
 
 </html>
